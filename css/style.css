@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap);
+
+@charset "UTF-8";
+
 * {
   padding: 0px;
   margin: 0px;
@@ -21,7 +24,7 @@ body {
 body {
   color: #96BB7C;
   line-height: 1;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-size: 0.875rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -33,7 +36,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-size: inherit;
 }
 
@@ -583,6 +586,15 @@ h6 {
   margin-right: 10px;
 }
 
+.menu-open .header__button_join-us {
+  color: #737373;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-open .header__button_join-us:hover {
+  color: #252B42;
+}
+
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -680,6 +692,10 @@ h6 {
 
 .item-footer__name:not(:last-child) {
   margin-bottom: 0.625rem;
+}
+
+.item-footer__name:hover {
+  text-decoration: underline;
 }
 
 .item-footer__get-in-touch {
@@ -855,6 +871,13 @@ h6 {
   padding-top: 11.5625rem;
 }
 
+.main-block__image {
+  margin-right: -100px;
+  position: relative;
+  z-index: 2;
+  padding-top: 90px;
+}
+
 .info-block__actions {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -862,24 +885,6 @@ h6 {
   gap: 10px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.image-block {
-  margin-right: -100px;
-  position: relative;
-  z-index: 2;
-}
-
-@supports (padding-top: clamp( 5.625rem , 5.625rem  +  0vw , 5.625rem )) {
-  .image-block {
-    padding-top: clamp( 5.625rem , 5.625rem  +  0vw , 5.625rem );
-  }
-}
-
-@supports not (padding-top: clamp( 5.625rem , 5.625rem  +  0vw , 5.625rem )) {
-  .image-block {
-    padding-top: calc(5.625rem + 0 * (100vw - 20rem) / 47.5);
-  }
 }
 
 .image-block__background {
@@ -1786,7 +1791,7 @@ h6 {
 }
 
 @media (max-width: 1280px) {
-  .image-block {
+  .main-block__image {
     margin-right: 0px;
   }
 }
@@ -2129,6 +2134,10 @@ h6 {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
+  }
+
+  .services__column:nth-last-of-type(2) {
+    margin-top: 0;
   }
 }
 
