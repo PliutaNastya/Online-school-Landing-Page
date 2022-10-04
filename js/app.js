@@ -64,6 +64,10 @@
         bodyUnlock();
         document.documentElement.classList.remove("menu-open");
     }
+    let links = document.querySelectorAll(".menu__link");
+    for (let link of links) link.onclick = () => {
+        document.documentElement.classList.remove("lock", "menu-open");
+    };
     function FLS(message) {
         setTimeout((() => {
             if (window.FLS) console.log(message);
